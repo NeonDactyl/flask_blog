@@ -40,6 +40,7 @@ def register():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    flash('This does not work yet.', 'danger')
     if form.validate_on_submit():
         flash(f'{form.username} log in success!', 'success')
         return redirect(url_for('home'))
